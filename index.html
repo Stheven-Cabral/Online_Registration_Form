@@ -19,17 +19,22 @@
             <div>
                 <h2>Contact Information</h2>
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname">
+                <input type="text" id="fullname" name="fullname" placeholder="Required" required>
+
                 <label for="email">Email Address</label>
-                <input type="text" id="email" name="email">
+                <input type="email" id="email" name="email" placeholder="Required" required>
+
                 <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone">
+
                 <label for="address">Street Address</label>
                 <input type="text" id="address" name="address">
+
                 <label for="city">City</label>
                 <input type="text" id="city" name="city">
+
                 <label for="state-select">State</label>
-                <select id="state-select" name=state>
+                <select id="state-select" name="state">
                     <!-- State options from freeformatter.com/usa-state-list-html-select.html -->
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -83,6 +88,7 @@
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>
                 </select>
+
                 <label for="zip">Zip Code</label>
                 <input type="text" id="zip" name="zip">
             </div>
@@ -91,15 +97,31 @@
                 <h2>Contact Information</h2>
                 <fieldset>
                     <legend>Select the newsletters you would like to receive</legend>
-                    <input type="checkbox" id="htmlnews" name="newsletter">
-                    <input type="checkox" id="cssnews" name="newsletter">
-                    <input type="checkbox" id="jsnews" name="newsletter">
+                    <input type="checkbox" id="htmlnews" name="newsletter" value="HTML_News">
+                    <label for="htmlnews">HTML News</label>
+
+                    <input type="checkbox" id="cssnews" name="newsletter" value="CSS_News">
+                    <label for="cssnews">CSS News</label>
+
+                    <input type="checkbox" id="jsnews" name="newsletter" value="JS_News">
+                    <label for="jsnews">Javascript News</label>
                 </fieldset>
+
                 <fieldset>
                     <legend>Newsletter format</legend>
+                    <input type="radio" id="option-html" name="html" value="HTML">
+                    <label for="htmlnews">HTML</label>
+
+                    <input type="radio" id="plaintext" name="plaintext" value="Plaintext">
+                    <label for="cssnews">Plain text</label>
                 </fieldset>
-                <Label></Label>
-                <textaarea></textaarea>
+
+                <Label for="other-topics">Other topics you'd like to hear about</Label>
+                <textarea id="other-topics" name="topic" rows="10" columns="100"></textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="Sign Up" id="signup" name="signup">
             </div>
 
         </form>
