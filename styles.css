@@ -1,45 +1,73 @@
 /* Base styling. Mobile first approach */
 
 body {
-    margin: auto;
     font-family: 'Libre Caslon Text', serif;
 }
+
 /* Header Styles */
 header {
+    margin: auto;
+    margin-bottom: 2px;
+    padding-bottom: 35px;
+    width: 95%;
     text-align: center;
+    border-bottom: 3px solid olive;
 }
 
 header h1 {
     margin: 0px;
     padding: 30px 0px 30px 0px;
-    background-color: maroon;
-    font-size: 1.1rem;
+    background-color: olive;
+    font-size: 1.2rem;
     color: white;
 }
 
 header h2 {
-    font-size: 1.15rem;
-    color: rgb(107, 1, 1);
+    font-size: 1.3rem;
+    color: darkolivegreen;
     margin-top: 35px;
 }
 
 header p {
     width: 95%;
-    margin-left: 0px;
-    margin-right: 0px;    
+    margin: auto;
+    font-weight: 500;
+    color: gray; 
 }
 
 /* Main Styles */
 main {
     width: 95%;
     margin: auto;
-    border-top: 3px solid;
+    border-top: 1.5px solid olive;
 }
 
 /* Form styles */
-div {
+.continfo,
+.newsletter-set {
     display: flex;
     flex-direction: column;
+}
+
+/* Contact information styles */
+#contact h2 {
+    font-size: 1.3rem;
+    color: darkolivegreen;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.continfo label{
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: gray; 
+}
+
+.continfo input{
+    height: 50px;
+    margin-bottom: 15px;
+    border-style: none;
+    border-radius: 4px;
+    background-color: rgb(240, 239, 239);
 }
 
 /* Styling for 768px wide tablets or desktops. */
