@@ -56,22 +56,24 @@ main {
     margin-top: 35px;
     margin-bottom: 35px;
 }
+
 .continfo label {
     margin-bottom: 10px;
     font-weight: 500;
-    color: gray; 
+    color: darkolivegreen; 
 }
 
 .continfo input {
-    height: 50px;
+    height: 60px;
     margin-bottom: 15px;
+    padding: 0px 20px 0px 20px;
     border-style: none;
     border-radius: 4px;
     background-color: rgb(240, 239, 239);
 }
 
 .continfo input[placeholder] {
-    float: right;
+    text-align: right;
     font-style: italic;
 }
 
