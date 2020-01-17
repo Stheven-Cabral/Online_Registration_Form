@@ -56,19 +56,30 @@ main {
     margin-top: 35px;
     margin-bottom: 35px;
 }
-.continfo label{
+.continfo label {
     margin-bottom: 10px;
     font-weight: 500;
     color: gray; 
 }
 
-.continfo input{
+.continfo input {
     height: 50px;
     margin-bottom: 15px;
     border-style: none;
     border-radius: 4px;
     background-color: rgb(240, 239, 239);
 }
+
+.continfo input[placeholder] {
+    float: right;
+    font-style: italic;
+}
+
+.continfo input:focus {
+    border: 2px solid darkolivegreen;
+}
+
+
 
 /* Styling for 768px wide tablets or desktops. */
 @media (min-width: 768px) {
