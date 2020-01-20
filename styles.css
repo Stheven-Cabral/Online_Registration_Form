@@ -87,11 +87,14 @@ main {
 ::placeholder {
     text-align: right;
     font-style: italic;
+    opacity: 50%;
 }
 
 .continfo input:focus,
 .continfo select:focus {
     border: 3px solid darkolivegreen;
+    background-color: rgb(241, 225, 182);
+    transition: all .5s;
 }
 
 #zip {
@@ -143,6 +146,8 @@ main {
 
 #other-topics:focus {
     border: 3px solid darkolivegreen;
+    background-color: rgb(241, 225, 182);
+    transition: all .5s;
 }
 
 /* signup button styles */
@@ -209,3 +214,4 @@ footer {
     .continfo input {
         grid-area: inputs;
     }
+}
