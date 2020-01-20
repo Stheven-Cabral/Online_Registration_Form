@@ -72,7 +72,7 @@ main {
     background-color: rgb(240, 239, 239);
 }
 
-.continfo input[placeholder] {
+::placeholder {
     text-align: right;
     font-style: italic;
 }
