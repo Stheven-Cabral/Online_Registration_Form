@@ -4,8 +4,17 @@ body {
     font-family: 'Libre Caslon Text', serif;
 }
 
-/* Header Styles */
-header {
+/* Header and section Styles */
+header h1 {
+    padding: 30px 0px 30px 0px;
+    margin-top: 0px;
+    background-color: olive;
+    text-align: center;
+    font-size: 1.25rem;
+    color: white;
+}
+
+section {
     margin: auto;
     margin-bottom: 2px;
     padding-bottom: 35px;
@@ -14,21 +23,13 @@ header {
     border-bottom: 3px solid olive;
 }
 
-header h1 {
-    margin: 0px;
-    padding: 30px 0px 30px 0px;
-    background-color: olive;
-    font-size: 1.2rem;
-    color: white;
-}
-
-header h2 {
+section h2 {
     font-size: 1.3rem;
     color: darkolivegreen;
     margin-top: 35px;
 }
 
-header p {
+section p {
     width: 95%;
     margin: auto;
     font-weight: 500;
@@ -50,22 +51,33 @@ main {
 }
 
 /* Contact information styles */
-#contact h2 {
+#contact {
+    border: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    border-bottom: 1.5px solid olive;
+}
+#contact legend {
     font-size: 1.3rem;
     color: darkolivegreen;
-    margin-top: 35px;
+    font-weight: 900;
+    padding-top: 35px;
     margin-bottom: 35px;
 }
 
 .continfo label {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: 500;
-    color: darkolivegreen; 
+    color: darkolivegreen;
 }
 
-.continfo input {
+.continfo input,
+.continfo select {
     height: 60px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     padding: 0px 20px 0px 20px;
     border-style: none;
     border-radius: 4px;
@@ -77,16 +89,123 @@ main {
     font-style: italic;
 }
 
-.continfo input:focus {
-    border: 2px solid darkolivegreen;
+.continfo input:focus,
+.continfo select:focus {
+    border: 3px solid darkolivegreen;
 }
 
+#zip {
+    width: 40%;
+}
 
+/* Newsletter styles */
+#newsletter {
+    border: none;
+    margin-top: 40px;
+    padding: 0px;
+}
+
+#newsletter legend {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: darkolivegreen;
+    margin-bottom: 10px;
+}
+
+.newsletter-info {
+    width: 97%;
+    margin: auto;
+}
+
+#newsletter p,
+.newsletter-info input,
+.newsletter-info label,
+#topics {
+    margin-bottom: 20px;
+    color: darkolivegreen; 
+}
+
+#newsletter p,
+#topics {
+    margin-top: 20px;
+}
+
+#other-topics {
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 125px;
+    margin: 20px 0px 20px 0px;
+    border-style: none;
+    border-radius: 4px;
+    background-color: rgb(240, 239, 239);
+}
+
+#other-topics:focus {
+    border: 3px solid darkolivegreen;
+}
+
+/* signup button styles */
+#signup-container {
+    width: 97%;
+    margin: auto;
+}
+#signup {
+    width: 100%;
+    margin: 5px 0px 20px 0px;
+    min-height: 75px;
+    background-color: rgb(241, 183, 35);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+}
+
+/* footer syles */
+footer {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    font-style: italic;
+    color: darkolivegreen;
+    opacity: 75%;
+}
 
 /* Styling for 768px wide tablets or desktops. */
 @media (min-width: 768px) {
+
+    /* main and section styles */
+    section,
+    main {
+        max-width: 768px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+        margin-top: 80px;
+    }
+
+    section {
+        padding-bottom: 55px;
+    }   
+
+    /* contact information styles */
+    #contact legend {
+        padding-top: 55px;
+    }
+
     .continfo {
         display: grid;
+        grid-template-areas: "labels inputs";
         grid-template-columns: 20% 80%;
     }
-}
+
+    .continfo label {
+        grid-area: labels;
+        align-self: center;
+    }
+
+    .continfo input {
+        grid-area: inputs;
+    }

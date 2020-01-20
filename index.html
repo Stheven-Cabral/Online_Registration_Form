@@ -13,14 +13,17 @@
 
     <header>
         <h1>THE CODE REVIEW</h1>
+    </header>
+
+    <section>
         <h2><strong>Signup for our newsletter</strong></h2>
         <p>Get the latest news on how your code is doing right in your inbox</p>
-    </header>
+    </section>
 
     <main>
         <form>
-            <div id="contact">
-                <h2>Contact Information</h2>
+            <fieldset id="contact">
+                <legend>Contact Information</legend>
 
                 <div class="continfo">
                     <label for="fullname">Full Name</label>
@@ -50,6 +53,7 @@
                 <div class="continfo">
                     <label for="state-select">State</label>
                     <select id="state-select" name="state">
+                        <option id="choose-state" value="" disabled selected hidden>Choose State</option>
                         <!-- State options from freeformatter.com/usa-state-list-html-select.html -->
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -109,46 +113,44 @@
                     <label for="zip">Zip Code</label>
                     <input type="text" id="zip" name="zip">
                 </div>
-            </div>
+            </fieldset>
 
-            <div id="newsletter">
-                <h2>Newsletter</h2>
-                <fieldset class="newsletter-set">
-                    <legend>Select the newsletters you would like to receive</legend>
-                    <div class="newsletter-info">
-                        <input type="checkbox" id="htmlnews" name="newsletter" value="HTML_News">
-                        <label for="htmlnews">HTML News</label>
-                    </div>
+            <fieldset id="newsletter">
+                <legend>Newsletter</legend>
+                <p class="newsletter-info">Select the newsletters you would like to receive</p>
+                <div class="newsletter-info">
+                    <input type="checkbox" id="htmlnews" name="newsletter" value="HTML_News">
+                    <label for="htmlnews">HTML News</label>
+                </div>
 
-                    <div class="newsletter-info">
-                        <input type="checkbox" id="cssnews" name="newsletter" value="CSS_News">
-                        <label for="cssnews">CSS News</label>
-                    </div>
+                <div class="newsletter-info">
+                    <input type="checkbox" id="cssnews" name="newsletter" value="CSS_News">
+                    <label for="cssnews">CSS News</label>
+                </div>
 
-                    <div class="newsletter-info">
-                        <input type="checkbox" id="jsnews" name="newsletter" value="JS_News">
-                        <label for="jsnews">Javascript News</label>
-                    </div>
-                </fieldset>
+                <div class="newsletter-info">
+                    <input type="checkbox" id="jsnews" name="newsletter" value="JS_News">
+                    <label for="jsnews">Javascript News</label>
+                </div>
 
-                <fieldset class="newsletter-set">
-                    <legend>Newsletter format</legend>
-                    <div class="newsletter-info">
-                        <input type="radio" id="option-html" name="html" value="HTML">
-                        <label for="htmlnews">HTML</label>
-                    </div>
+                <p class="newsletter-info">Newsletter format</p>
+                <div class="newsletter-info">
+                    <input type="radio" id="option-html" name="newsletter-format" value="HTML">
+                    <label for="option-html">HTML</label>
+                </div>
 
-                    <div class="newsletter-info">
-                        <input type="radio" id="plaintext" name="plaintext" value="Plaintext">
-                        <label for="cssnews">Plain text</label>
-                    </div>
-                </fieldset>
+                <div class="newsletter-info">
+                    <input type="radio" id="option-plaintext" name="newsletter-format" value="Plaintext">
+                    <label for="option-plaintext">Plain text</label>
+                </div>
 
-                <Label for="other-topics">Other topics you'd like to hear about</Label>
-                <textarea id="other-topics" name="topic" rows="10" columns="100"></textarea>
-            </div>
+                <div id="topics" class="newsletter-info">
+                    <Label for="other-topics">Other topics you'd like to hear about</Label>
+                    <textarea id="other-topics" name="topic"></textarea>
+                </div>
+            </fieldset>
 
-            <div>
+            <div id="signup-container">
                 <input type="submit" value="Sign Up" id="signup" name="signup">
             </div>
 
